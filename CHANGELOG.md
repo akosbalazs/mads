@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.0.6
+
+Added support for 64tass syntax.
+
 ### 0.0.5
 
 Fixed parsing of %% parameter ([#1](https://github.com/mirao/mads/issues/1)) 

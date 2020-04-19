@@ -7,9 +7,11 @@
 		<string>asm</string>
 		<string>mac</string>
 		<string>hea</string>
+		<string>src</string>
+		<string>s</string>
 	</array>
 	<key>name</key>
-	<string>6502/65816 Assembly (MADS)</string>
+	<string>6502/65816 Assembly (MADS/64tass)</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -92,7 +94,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?i)((^|\s+)(\.(if|ifdef|ifndef)|#(if|while))|\s+ift|^\s+(eli|els|eif)|^\s*(\.(else|elseif|endif)|#(else|end)))\b</string>
+					<string>(?i)((^|\s+)(\.(if|ifdef|ifndef)|#(if|while))|\s+ift|^\s+(eli|els|eif)|^\s*(\.(else|elseif|elsif|endif|fi)|#(else|end)))\b</string>
 					<key>name</key>
 					<string>keyword.control.if</string>
 				</dict>
@@ -140,7 +142,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?i)(^|\s+)\.(define|undef|macro|endm|mend|rept|endr|proc|endp|pend)\b</string>
+					<string>(?i)(^|\s+)\.(define|undef|macro|endm|mend|rept|endr|proc|endp|pend|page|section|dsection|cerror|error|warn|binary|include)\b</string>
 					<key>name</key>
 					<string>entity.other.attribute-name.macro</string>
 				</dict>
@@ -163,6 +165,14 @@
 					<string>\*/</string>
 					<key>name</key>
 					<string>comment.block</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>.comment</string>
+					<key>end</key>
+					<string>.endc</string>
+					<key>name</key>
+					<string>comment.block.64tass</string>
 				</dict>
 				<dict>
 					<key>match</key>
@@ -248,7 +258,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>(?i)\s+dta|((^|\s+|(?<=\())\.(d?byte|d?word|long)|(^|\s+)\.((zp)?var|reg|db|dw|by|ds|sb|cb|wo|he|fl))\b</string>
+					<string>(?i)\s+dta|((^|\s+|(?<=\())\.(d?byte|d?word|long|fill)|(^|\s+)\.((zp)?var|reg|db|dw|by|ds|sb|cb|wo|he|fl))\b</string>
 					<key>name</key>
 					<string>storage.type</string>
 				</dict>
@@ -424,8 +434,8 @@
 		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>source.asm.6502_65816.mads</string>
+	<string>source.asm.6502_65816.mads_64tass</string>
 	<key>uuid</key>
-	<string>8D1E7063-570E-4E88-AF2E-EA3CE330B2D3</string>
+	<string>871ab779-0ae5-4c44-82be-c67c004b2aaa</string>
 </dict>
 </plist>
