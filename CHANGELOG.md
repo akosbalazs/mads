@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.0.7
+
+Added language specific region folding via `;#region` and `;#endregion`.
+
 ### 0.0.6
 
 Added support for 64tass syntax.
